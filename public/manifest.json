@@ -5,5 +5,12 @@
   "browser_action": {
       "default_popup": "index.html"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["/static/js/content.js"],
+      "css": ["/static/css/main.css", "/static/css/content.css"]
+    }
+  ],
   "content_security_policy": "script-src 'self' 'sha256-tviFB6C9pBqbSMGfY3wUPhksg+FGWP4kXT40iyP6KtQ='; object-src 'self'"
 }
